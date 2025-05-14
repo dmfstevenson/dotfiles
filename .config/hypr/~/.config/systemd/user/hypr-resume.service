@@ -1,0 +1,10 @@
+[Unit]
+Description=Reload Hyprland on resume
+After=suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=hyprctl reload
+
+[Install]
+WantedBy=suspend.target 
